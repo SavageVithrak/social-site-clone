@@ -1,0 +1,13 @@
+.Title {
+  color: white;
+}
+
+.Navbar-text {
+  color: rgb(255, 230, 0);
+}
+
+/* From Bootstrap */
+.navbar-toggler {
+  background-color: rgb(94, 94, 94);
+}
+/* End Boostrap */
