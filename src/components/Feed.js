@@ -4,12 +4,17 @@ import Post from "./Post";
 
 function Feed(props) {
 	const buildFeed = () => {
-		let createdPosts = props.posts.map((post) => {
+		let existingPosts = props.posts.map((post) => {
 			return (
-				<Post key={post.id} id={post.id} body={post.body} image={post.image} />
+				<Post
+					key={post.id}
+					username={post.username}
+					body={post.body}
+					image={post.image}
+				/>
 			);
 		});
-		return createdPosts;
+		return existingPosts;
 	};
 
 	return <div className="margin-bottom">{buildFeed()}</div>;
