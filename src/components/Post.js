@@ -3,14 +3,13 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import "./Post.css";
 
-// TODO: Add props
 function Post(props) {
 	return (
 		<div>
 			<Card className="card" border="primary">
-				<Card.Text className="username-label">{props.userName}</Card.Text>
+				<Card.Text className="username-label">{props.id}</Card.Text>
 				<Card.Body>
-					<Card.Text>{props.text}</Card.Text>
+					<Card.Text>{props.body}</Card.Text>
 					<Card.Img className="img-max-size" src={props.image} />
 				</Card.Body>
 				<div className="like-comment">
