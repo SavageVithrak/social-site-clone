@@ -8,14 +8,14 @@ function App() {
 	const [posts, changePosts] = useState([
 		{
 			postId: 1,
-			id: "Viorel",
+			username: "Viorel",
 			body: "This is a test",
 			image:
 				"https://image.shutterstock.com/image-photo/word-example-written-on-magnifying-260nw-1883859943.jpg",
 		},
 		{
 			postId: 2,
-			id: "Diana",
+			username: "Diana",
 			body: "This is a different test",
 			image:
 				"https://img.icons8.com/external-anggara-flat-anggara-putra/344/external-send-email-interface-anggara-flat-anggara-putra.png",
@@ -26,9 +26,9 @@ function App() {
 		<>
 			<Navigation />
 			<Routes>
-				<Route path="/s" index element={<Feed posts={posts} />} />
+				<Route path="/" index element={<Feed posts={posts} />} />
 				<Route
-					path="/"
+					path="/s"
 					element={<AddPost posts={posts} changePosts={changePosts} />}
 				/>
 			</Routes>

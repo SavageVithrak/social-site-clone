@@ -7,7 +7,7 @@ function Post(props) {
 	return (
 		<div>
 			<Card className="card" border="primary">
-				<Card.Text className="username-label">{props.id}</Card.Text>
+				<Card.Text className="username-label">{props.username}</Card.Text>
 				<Card.Body>
 					<Card.Text>{props.body}</Card.Text>
 					<Card.Img className="img-max-size" src={props.image} />

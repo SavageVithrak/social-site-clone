@@ -24,7 +24,6 @@ function AddPost(props) {
 		const newState = { ...formValues };
 
 		newState[fieldName] = fieldValue;
-		console.log(newState);
 		changeFormValues(newState);
 	};
 
@@ -36,6 +35,7 @@ function AddPost(props) {
 		toastr["success"]("New post added!", "Success");
 		newPostId++;
 		changeFormValues({ postId: newPostId, username: "", body: "", image: "" });
+		console.log(props.posts);
 		// TODO: add Toastr notification
 	};
 
