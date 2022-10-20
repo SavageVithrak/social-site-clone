@@ -9,9 +9,10 @@ function App() {
 		{
 			postId: 1,
 			username: "Viorel",
-			body: "This is a test",
+			body: "Where is my toothbrush?",
 			image:
-				"https://image.shutterstock.com/image-photo/word-example-written-on-magnifying-260nw-1883859943.jpg",
+				"https://as2.ftcdn.net/v2/jpg/04/43/66/71/1000_F_443667180_AaSXt7IPgZWYlnrfZ5X1kyfu0IbtL5dh.jpg",
+			likes: 5,
 		},
 		{
 			postId: 2,
@@ -19,6 +20,15 @@ function App() {
 			body: "This is a different test",
 			image:
 				"https://img.icons8.com/external-anggara-flat-anggara-putra/344/external-send-email-interface-anggara-flat-anggara-putra.png",
+			likes: 23,
+		},
+		{
+			postId: 3,
+			username: "Ross",
+			body: "Please work!!!",
+			image:
+				"https://storage.googleapis.com/siteassetsswd/198/slideshow/663/20200625074107_56_o_1ba8en13b14c61b15hei1bd63jlc.jpg",
+			likes: 11,
 		},
 	]);
 
