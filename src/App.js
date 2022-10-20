@@ -7,12 +7,14 @@ import Navigation from "./components/Navigation";
 function App() {
 	const [posts, changePosts] = useState([
 		{
+			postId: 1,
 			id: "Viorel",
 			body: "This is a test",
 			image:
 				"https://image.shutterstock.com/image-photo/word-example-written-on-magnifying-260nw-1883859943.jpg",
 		},
 		{
+			postId: 2,
 			id: "Diana",
 			body: "This is a different test",
 			image:
@@ -24,8 +26,11 @@ function App() {
 		<>
 			<Navigation />
 			<Routes>
-				<Route path="/" index element={<Feed posts={posts} />} />
-				<Route path="/newpost" element={<AddPost />} />
+				<Route path="/s" index element={<Feed posts={posts} />} />
+				<Route
+					path="/"
+					element={<AddPost posts={posts} changePosts={changePosts} />}
+				/>
 			</Routes>
 		</>
 	);
