@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { HandThumbsUp } from "react-bootstrap-icons";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
@@ -15,6 +15,11 @@ function Post(props) {
 	const [liked, changeLiked] = useState(false);
 
 	const [likeCount, changeLikeCount] = useState(props.likes);
+
+	useEffect(() => {
+		const stringFromLS = localStorage.getItem("commentsList");
+		changeComments(JSON.parse(stringFromLS) || []);
+	}, []);
 
 	const handleLike = () => {
 		if (!liked) {
@@ -49,6 +54,7 @@ function Post(props) {
 	const submitComment = () => {
 		changeComments((comments) => {
 			let newComments = [...comments, commentField];
+			localStorage.setItem("commentsList", JSON.stringify(newComments));
 			newComments[newComments.length - 1]["name"] = "You";
 			return newComments;
 		});

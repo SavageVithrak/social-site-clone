@@ -37,10 +37,10 @@ function App() {
 			<Navigation />
 			<Routes>
 				<Route path="/">
-					<Route exact path="home" element={<Feed posts={posts} />} />
+					<Route index path="/#/home" element={<Feed posts={posts} />} />
 					<Route
 						exact
-						path="newpost"
+						path="/#/newpost"
 						element={<AddPost posts={posts} changePosts={changePosts} />}
 					/>
 				</Route>
