@@ -11,6 +11,7 @@ function Feed(props) {
 					username={post.username}
 					body={post.body}
 					image={post.image}
+					likes={post.likes}
 				/>
 			);
 		});

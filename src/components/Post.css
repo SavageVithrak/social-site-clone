@@ -1,5 +1,15 @@
 .img-max-size {
-	max-width: 500px;
+	max-width: 600px;
+}
+
+.like-comment {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	margin: auto;
+	padding: 0.5rem;
+	gap: 0.5rem;
 }
 
 .card {
@@ -12,14 +22,34 @@
 	margin-top: 1rem;
 }
 
+.likes-comments {
+	display: flex;
+	width: 20.5rem;
+	gap: 1rem;
+}
+
+.like-box {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+	border: 1px solid;
+	border-radius: 30px;
+	margin-top: 0.2rem;
+	margin-bottom: 0.2rem;
+	max-height: 2rem;
+}
+
 .username-label {
 	font-size: 1.5rem;
 }
 
-.like-comment {
+.comment-box {
 	display: flex;
-	width: 95%;
-	gap: 1rem;
+	flex-direction: column;
+	margin-left: 0.8rem;
+	margin-bottom: 0.5rem;
+	gap: 0.5rem;
 }
 
 input {
@@ -28,11 +58,17 @@ input {
 }
 
 .send-icon {
+	border: 1px solid;
+	border-radius: 30px;
+	padding: 2px;
 	margin-top: auto;
 	margin-bottom: auto;
-	margin-left: -8px;
 	height: 30px;
 	width: 30px;
+}
+
+p {
+	margin-bottom: 0rem;
 }
 
 @media screen and (max-width: 800px) {
