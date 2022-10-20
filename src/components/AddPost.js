@@ -32,11 +32,14 @@ function AddPost(props) {
 			let newPosts = [...posts, formValues];
 			return newPosts;
 		});
-		toastr["success"]("New post added!", "Success");
+		toastr["success"](
+			"Your post has been published! Head over to the feed to check it out",
+			"Success"
+		);
+		// Increment post ID so no 2 posts have the same ID
 		newPostId++;
+		// Reset form values
 		changeFormValues({ postId: newPostId, username: "", body: "", image: "" });
-		console.log(props.posts);
-		// TODO: add Toastr notification
 	};
 
 	return (
